@@ -1,0 +1,9 @@
+output
+*.db
+*.pyc
+__pycache__/
+/testing.py
+/output/
+/*.gitmodules
+/assets/
+/assets/splashvid/
