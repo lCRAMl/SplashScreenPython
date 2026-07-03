@@ -3,6 +3,9 @@
 # Transparenter Splash-Screen via animated WebP (Qt-nativ, voller Alpha-Kanal).
 # Eine einzige .webp-Datei ersetzt die PNG-Sequenz – typ. 80–95 % kleiner.
 
+import sys
+from pathlib import Path
+
 from PyQt6.QtWidgets import QWidget, QLabel
 from PyQt6.QtCore import (
     Qt, QPropertyAnimation, QEasingCurve, QRect,
@@ -10,7 +13,21 @@ from PyQt6.QtCore import (
 )
 from PyQt6.QtGui import QPainter, QImage, QMovie, QColor, QPainterPath, QPen
 
-from utils import resource_path
+
+def resource_path(relative_path: str) -> Path:
+    """
+    Liefert den Pfad zu einer Ressource innerhalb dieses Submodule-Ordners
+    (SplashScreenPython/assets/...). Verwendet immer die eigenen Assets des
+    Submodules, unabhängig davon, ob es eigenständig oder als Submodul im
+    Hauptprogramm ausgeführt wird.
+    """
+    if getattr(sys, "frozen", False):
+        base_path = Path(sys._MEIPASS) / "SplashScreenPython"  # type: ignore[attr-defined]
+        if not base_path.exists():
+            base_path = Path(sys._MEIPASS)  # type: ignore[attr-defined]
+    else:
+        base_path = Path(__file__).resolve().parent
+    return base_path / relative_path
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -38,7 +55,7 @@ TEXT_FONT_SIZE = 20
 TEXT_X         = -370
 TEXT_Y         = 390
 TEXT_WIDTH     = None
-TEXT_HEIGHT    = 100
+TEXT_HEIGHT    = 200
 
 
 class OutlinedLabel(QLabel):
