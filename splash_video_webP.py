@@ -1,4 +1,4 @@
-# splash_video.py
+# splash_video_webp.py
 #
 # Transparenter Splash-Screen via animated WebP (Qt-nativ, voller Alpha-Kanal).
 # Eine einzige .webp-Datei ersetzt die PNG-Sequenz – typ. 80–95 % kleiner.
