@@ -10,14 +10,7 @@ from PyQt6.QtCore import (
 )
 from PyQt6.QtGui import QPainter, QImage, QMovie, QColor, QPainterPath, QPen
 
-# Der relative Import .utils zwingt Python, explizit SplashScreenPython/utils.py als eigenständiges Modul 
-# (SplashScreenPython.utils) zu laden — unabhängig davon, was sonst noch utils heißt. Beim direkten Ausführen 
-# der Datei gibt es keinen Package-Kontext für relative Importe, daher der Fallback auf den normalen Import 
-# (der dann korrekt das lokale utils.py findet, weil nur der Submodul-Ordner auf dem Pfad steht).
-try:
-    from .utils import resource_path      # als Teil des Packages importiert (Hauptprogramm)
-except ImportError:
-    from utils import resource_path       # direkt als Skript ausgeführt
+from utils import resource_path
 
 
 # ══════════════════════════════════════════════════════════════════════════════
