@@ -44,7 +44,7 @@ ANIM_START_SCALE     = 0.82
 ANIM_OVERSHOOT_SCALE = 1.03
 
 # --- Animated WebP -----------------------------------------------------------
-ANIM_PATH   = "assets/splashvid/splash_KeriRussell.webp"  # Pfad zur animated .webp Datei
+ANIM_PATH   = "assets/splash_KeriRussell_90percent.webp"  # Pfad zur animated .webp Datei
 ANIM_WIDTH  = 960                   # Ausgabegröße (px) – unabhängig von Frame-Größe
 ANIM_HEIGHT = 960
 ANIM_SPEED  = 100                   # Wiedergabegeschwindigkeit in %
