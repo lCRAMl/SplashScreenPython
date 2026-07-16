@@ -44,16 +44,16 @@ ANIM_START_SCALE     = 0.82
 ANIM_OVERSHOOT_SCALE = 1.03
 
 # --- Animated WebP -----------------------------------------------------------
-ANIM_PATH   = "assets/splash_KeriRussell_90percent.webp"  # Pfad zur animated .webp Datei
+ANIM_PATH   = "assets/splash_ChloeGraceMoretz_90percent.webp"  # Pfad zur animated .webp Datei
 ANIM_WIDTH  = 960                   # Ausgabegröße (px) – unabhängig von Frame-Größe
 ANIM_HEIGHT = 960
 ANIM_SPEED  = 100                   # Wiedergabegeschwindigkeit in %
                                     # (FPS steckt in der .webp; setSpeed skaliert sie)
 
 # --- Text (Build-Info Label) -------------------------------------------------
-TEXT_FONT_SIZE = 20
-TEXT_X         = -370
-TEXT_Y         = 390
+TEXT_FONT_SIZE = 10
+TEXT_X         = -250
+TEXT_Y         = 620
 TEXT_WIDTH     = None
 TEXT_HEIGHT    = 200
 
